@@ -4,15 +4,26 @@ package _01_Custom_ArrayList;
 
 public class ArrayList <T>{
 	
+	T[] tArray = (T[]) new Object[0];
+	
 	public ArrayList() {
 	}
 	
 	public T get(int loc) throws IndexOutOfBoundsException {
-		
-		return null;
+		return tArray[loc];
 	}
 	
 	public void add(T val) {
+		Object[] temp = new Object[ta.length];
+		 for (int j = 0; j < ta.length; j++) {
+			temp[j] = ta[j];
+		 }
+		 ta = (T[]) new Object[ta.length + 1];
+		 for (int j = 0; j < temp.length; j++) {
+				ta[j] = (T) temp[j];
+			 }
+		 ta[ta.length - 1] = (T) i;
+		 lengthT = ta.length;
 		
 	}
 	
